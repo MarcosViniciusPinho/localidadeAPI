@@ -7,6 +7,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
+ * Author: Marcos Pinho
+ * E-mail: marcosjava2008@gmail.com
  * Classe que representa a tabela municipio no banco de dados.
  */
 @Entity

@@ -5,6 +5,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 /**
+ * Author: Marcos Pinho
+ * E-mail: marcosjava2008@gmail.com
  * Classe que representa a tabela pais no banco de dados.
  */
 @Entity
@@ -21,20 +23,20 @@ public class Pais implements Serializable {
     @Column(name = "nome", length = 50, nullable = false)
     private String nome;
 
+    public Pais() {
+    }
+
+    public Pais(Long id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+
     public Long getId() {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     @Override
