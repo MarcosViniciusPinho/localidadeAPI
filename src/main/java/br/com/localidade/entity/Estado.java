@@ -33,12 +33,15 @@ public class Estado implements Serializable {
     @JoinColumn(name = "id_pais", nullable = false)
     private Pais pais;
 
-    public Long getId() {
-        return id;
+    public Estado() {
     }
 
-    public void setId(Long id) {
+    public Estado(Long id) {
         this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public String getNome() {
