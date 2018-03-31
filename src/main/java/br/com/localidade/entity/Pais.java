@@ -26,9 +26,8 @@ public class Pais implements Serializable {
     public Pais() {
     }
 
-    public Pais(Long id, String nome) {
+    public Pais(Long id) {
         this.id = id;
-        this.nome = nome;
     }
 
     public Long getId() {

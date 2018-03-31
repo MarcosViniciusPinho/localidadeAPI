@@ -1,6 +1,5 @@
 package br.com.localidade.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
@@ -48,24 +47,12 @@ public class Estado implements Serializable {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getSigla() {
         return sigla;
     }
 
-    public void setSigla(String sigla) {
-        this.sigla = sigla;
-    }
-
     public Pais getPais() {
         return pais;
-    }
-
-    public void setPais(Pais pais) {
-        this.pais = pais;
     }
 
     @Override

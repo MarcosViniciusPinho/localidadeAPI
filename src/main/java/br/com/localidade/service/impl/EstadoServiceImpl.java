@@ -20,6 +20,6 @@ public class EstadoServiceImpl implements EstadoService {
      */
     @Override
     public List<Estado> getEstadosPorPais() {
-        return this.estadoRepository.findAllByPais(new Pais(1L, "Brasil"));
+        return this.estadoRepository.findAllByPais(new Pais(1L));
     }
 }
