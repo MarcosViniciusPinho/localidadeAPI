@@ -16,4 +16,6 @@ public interface EstadoRepository extends JpaRepository<Estado, Long> {
 
     List<Estado> findAllByPais(Pais pais);
 
+    Estado findBySigla(String sigla);
+
 } 

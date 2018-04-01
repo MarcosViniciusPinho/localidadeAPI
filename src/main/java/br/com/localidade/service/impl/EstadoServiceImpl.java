@@ -27,8 +27,13 @@ public class EstadoServiceImpl implements EstadoService {
         return estados;
     }
 
-    private void validate(List<Estado> municipios){
-        if(CollectionUtils.isEmpty(municipios)){
+    @Override
+    public Estado getEstadoPelaSigla(String sigla) {
+        return this.estadoRepository.findBySigla(sigla);
+    }
+
+    private void validate(List<Estado> estados){
+        if(CollectionUtils.isEmpty(estados)){
             throw new RecurseNotFoundException("Recurso pais não foi encontrado");
         }
     }

@@ -12,4 +12,6 @@ public interface EstadoService {
 
     List<Estado> getEstadosPorPais();
 
+    Estado getEstadoPelaSigla(String sigla);
+
 } 
