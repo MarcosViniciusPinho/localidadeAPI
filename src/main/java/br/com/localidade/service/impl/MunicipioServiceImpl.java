@@ -7,6 +7,7 @@ import br.com.localidade.service.MunicipioService;
 import br.com.localidade.service.exception.RecurseNotFoundException;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class MunicipioServiceImpl implements MunicipioService {
      */
     @Override
     public List<Municipio> getMunicipiosPorEstado(Estado estado) {
-        List<Municipio> municipios = this.municipioRepository.findAllByEstado(estado);
+        List<Municipio> municipios = this.municipioRepository.findAllByEstado(estado, new Sort(Sort.Direction.ASC, "nome"));
         this.validate(municipios);
         return municipios;
     }

@@ -7,6 +7,7 @@ import br.com.localidade.service.EstadoService;
 import br.com.localidade.service.exception.RecurseNotFoundException;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class EstadoServiceImpl implements EstadoService {
      */
     @Override
     public List<Estado> getEstadosPorPais() {
-        List<Estado> estados = this.estadoRepository.findAllByPais(new Pais(1L));
+        List<Estado> estados = this.estadoRepository.findAllByPais(new Pais(1L), new Sort(Sort.Direction.ASC, "sigla"));
         this.validate(estados);
         return estados;
     }

@@ -2,6 +2,7 @@ package br.com.localidade.repository;
 
 import br.com.localidade.entity.Estado;
 import br.com.localidade.entity.Pais;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,7 +15,7 @@ import java.util.List;
 @Repository
 public interface EstadoRepository extends JpaRepository<Estado, Long> {
 
-    List<Estado> findAllByPais(Pais pais);
+    List<Estado> findAllByPais(Pais pais, Sort sort);
 
     Estado findBySigla(String sigla);
 
