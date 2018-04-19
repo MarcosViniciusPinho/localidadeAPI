@@ -30,7 +30,7 @@ public class MunicipioServiceImpl implements MunicipioService {
 
     private void validate(List<Municipio> municipios){
         if(CollectionUtils.isEmpty(municipios)){
-            throw new RecurseNotFoundException("Recurso estado não foi encontrado");
+            throw new RecurseNotFoundException("Não existem municípios relacionados ao estado informado");
         }
     }
 
