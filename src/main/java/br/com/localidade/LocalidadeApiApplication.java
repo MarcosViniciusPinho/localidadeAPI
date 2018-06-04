@@ -2,11 +2,9 @@ package br.com.localidade;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.context.annotation.DependsOn;
 
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@DependsOn("appConfig")
+@SpringBootApplication
+//@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 public class LocalidadeApiApplication {
 
 	public static void main(String[] args) {
@@ -17,4 +15,5 @@ public class LocalidadeApiApplication {
 //	public DataSource dataSource() {
 //		return DataSourceBuilder.create().build();
 //	}
+
 }
