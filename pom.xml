@@ -25,10 +25,17 @@
 
 		<commons-lang3.version>3.4</commons-lang3.version>
 		<flyway-maven-plugin.version>4.0.3</flyway-maven-plugin.version>
-		<database.url>jdbc:mysql://localhost:3306/localidade</database.url>
+		<!--Producao-->
+		<database.url>jdbc:mysql://localidade.cso5xzxqywko.us-east-1.rds.amazonaws.com:3306/localidade</database.url>
 		<database.user>root</database.user>
-		<database.password>@dmiN8732</database.password>
+		<database.password>dmiN8732</database.password>
 		<database.driver>com.mysql.jdbc.Driver</database.driver>
+
+		<!--Local-->
+		<!--<database.url>jdbc:mysql://localhost:3306/localidade</database.url>-->
+		<!--<database.user>root</database.user>-->
+		<!--<database.password>@dmiN8732</database.password>-->
+		<!--<database.driver>com.mysql.jdbc.Driver</database.driver>-->
 	</properties>
 
 	<dependencies>
